@@ -35,7 +35,7 @@ set wrapscan
 " Set the forward slash to be the slash for note.
 set shellslash
 
-" MAke command line two lines high
+" Make command line two lines high
 set ch=2
 
 " Set visual bell
@@ -65,7 +65,7 @@ set virtualedit=all
 set textwidth=80
 
 " Enable search highlighting
-set hlsearch
+"set hlsearch
 
 " Automaticaly read the file that has changed on disk
 set autoread
@@ -84,5 +84,6 @@ set ts=4
 " Number of spaces user for autoindent
 set sw=4
 
-set columns=150
-set lines=45
+" Set automatic code folding base on indentation
+set fdm=indent
+
