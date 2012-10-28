@@ -84,6 +84,9 @@ set ts=4
 " Number of spaces user for autoindent
 set sw=4
 
+" Use spaces instead of tabs
+set expandtab
+
 " Set automatic code folding base on indentation
 set fdm=indent
 
