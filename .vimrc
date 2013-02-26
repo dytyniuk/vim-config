@@ -62,7 +62,7 @@ set scrolloff=8
 set virtualedit=all
 
 " Set textwidth to be 80 chars
-set textwidth=80
+"set textwidth=80
 
 " Enable search highlighting
 "set hlsearch
@@ -76,7 +76,7 @@ set synmaxcol=2048
 set number
 
 " Set color scheme
-color xoria256m
+color lucius
 
 " Number of spaces a <Tab> equal to 
 set ts=4
@@ -88,5 +88,8 @@ set sw=4
 set expandtab
 
 " Set automatic code folding base on indentation
-set fdm=indent
+"set fdm=indent
+
+" Highlight current line
+set cursorline
 
