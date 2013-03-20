@@ -76,7 +76,7 @@ set synmaxcol=2048
 set number
 
 " Set color scheme
-color lucius
+color chlordane
 
 " Number of spaces a <Tab> equal to 
 set ts=4
