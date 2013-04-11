@@ -93,3 +93,5 @@ set expandtab
 " Highlight current line
 set cursorline
 
+autocmd VimEnter * NERDTree
+autocmd VimEnter * TagbarOpen
