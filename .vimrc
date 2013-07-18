@@ -76,7 +76,7 @@ set synmaxcol=2048
 set number
 
 " Set color scheme
-color chlordane
+color lucius
 
 " Number of spaces a <Tab> equal to 
 set ts=4
@@ -85,13 +85,10 @@ set ts=4
 set sw=4
 
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Set automatic code folding base on indentation
 "set fdm=indent
 
 " Highlight current line
 set cursorline
-
-autocmd VimEnter * NERDTree
-autocmd VimEnter * TagbarOpen
