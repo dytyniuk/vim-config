@@ -13,19 +13,21 @@ Bundle "tComment"
 Bundle "surround.vim"
 Bundle "AutoComplPop"
 Bundle "closetag.vim"
-Bundle "PHP-correct-Indenting"
 Bundle "TagHighlight"
 Bundle "checksyntax"
-Bundle "PHP-dictionary"
 Bundle "AutoFenc.vim"
 Bundle "mattn/zencoding-vim"
 Bundle "The-NERD-tree"
+Bundle "majutsushi/tagbar"
+
+Bundle "PHP-correct-Indenting"
+Bundle "php.vim"
+Bundle "PHP-dictionary"
+Bundle "stephpy/vim-phpdoc"
 
 Bundle "html5.vim"
-Bundle "php.vim"
 Bundle "Markdown"
 Bundle "xml.vim"
-Bundle "stephpy/vim-phpdoc"
 Bundle "JSON.vim"
 Bundle "jQuery"
 Bundle "sql.vim"
@@ -117,4 +119,4 @@ set expandtab
 
 " Highlight current line
 set cursorline
-colo molokai
+colo neverland
