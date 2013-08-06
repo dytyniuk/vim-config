@@ -2,8 +2,37 @@
 set nocompatible
 
 " Get that filetype staff happening
-filetype on
-filetype plugin on
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+
+call vundle#rc()
+
+Bundle "gmarik/vundle"
+Bundle "tComment"
+Bundle "surround.vim"
+Bundle "AutoComplPop"
+Bundle "closetag.vim"
+Bundle "PHP-correct-Indenting"
+Bundle "TagHighlight"
+Bundle "checksyntax"
+Bundle "PHP-dictionary"
+Bundle "AutoFenc.vim"
+Bundle "mattn/zencoding-vim"
+Bundle "The-NERD-tree"
+
+Bundle "html5.vim"
+Bundle "php.vim"
+Bundle "Markdown"
+Bundle "xml.vim"
+Bundle "stephpy/vim-phpdoc"
+Bundle "JSON.vim"
+Bundle "jQuery"
+Bundle "sql.vim"
+
+Bundle "molokai"
+Bundle "trapd00r/neverland-vim-theme"
+
 filetype indent on
 
 " Turn on syntax highlighting
@@ -76,7 +105,6 @@ set synmaxcol=2048
 set number
 
 " Set color scheme
-color lucius
 
 " Number of spaces a <Tab> equal to 
 set ts=4
@@ -85,10 +113,8 @@ set ts=4
 set sw=4
 
 " Use spaces instead of tabs
-"set expandtab
-
-" Set automatic code folding base on indentation
-"set fdm=indent
+set expandtab
 
 " Highlight current line
 set cursorline
+colo molokai
