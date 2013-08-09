@@ -4,9 +4,13 @@ set nocompatible
 " Get that filetype staff happening
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-
-call vundle#rc()
+if has('win32') || has('win64')
+    set rtp+=~/vimfiles/bundle/vundle/
+    call vundle#rc('$HOME/vimfiles/bundle')
+else
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+endif
 
 Bundle "gmarik/vundle"
 Bundle "tComment"
@@ -16,7 +20,7 @@ Bundle "closetag.vim"
 Bundle "TagHighlight"
 Bundle "checksyntax"
 Bundle "AutoFenc.vim"
-Bundle "mattn/zencoding-vim"
+Bundle "mattn/emmet-vim"
 Bundle "The-NERD-tree"
 Bundle "majutsushi/tagbar"
 
@@ -48,10 +52,6 @@ set lazyredraw
 " At least let yourself know what mode you'r in
 set showmode
 
-" Enable enhanced command-line completion, Presumes you have compiled
-" with +wildmenu, See :help 'wildmenu'
-set wildmenu
-
 " Let's make it easy to edit this file (mnemonic for the key sequence is
 " 's'rouce 'v'imrc)
 nmap <silent> ,sv :so $MYVIMRC<cr>
@@ -64,7 +64,9 @@ endif
 set wrapscan
 
 " Set the forward slash to be the slash for note.
-set shellslash
+if !has('win32') && !has('win64')
+    set shellslash
+endif
 
 " Make command line two lines high
 set ch=2
@@ -120,3 +122,4 @@ set expandtab
 " Highlight current line
 set cursorline
 colo neverland
+setlocal omnifunc=syntaxcomplete#Complete
