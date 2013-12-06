@@ -123,3 +123,10 @@ set expandtab
 set cursorline
 colo neverland
 setlocal omnifunc=syntaxcomplete#Complete
+
+" phpDoc keystrokes
+inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+nnoremap <C-P> :call PhpDocSingle()<CR>
+vnoremap <C-P> :call PhpDocRange()<CR> 
+" @author tag value for phpDoc
+let g:pdv_cfg_Author = "Ievgenii Dytyniuk <i.dytyniuk@gmail.com>"
