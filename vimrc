@@ -23,6 +23,10 @@ Bundle "AutoFenc.vim"
 Bundle "mattn/emmet-vim"
 Bundle "The-NERD-tree"
 Bundle "majutsushi/tagbar"
+Bundle "bling/vim-airline"
+Bundle "scrooloose/syntastic"
+Bundle "airblade/vim-gitgutter"
+Bundle "tpope/vim-fugitive"
 
 Bundle "PHP-correct-Indenting"
 Bundle "php.vim"
@@ -38,6 +42,7 @@ Bundle "sql.vim"
 
 Bundle "molokai"
 Bundle "trapd00r/neverland-vim-theme"
+Bundle "chriskempson/base16-vim"
 
 filetype indent on
 
@@ -130,3 +135,15 @@ nnoremap <C-P> :call PhpDocSingle()<CR>
 vnoremap <C-P> :call PhpDocRange()<CR> 
 " @author tag value for phpDoc
 let g:pdv_cfg_Author = "Ievgenii Dytyniuk <i.dytyniuk@gmail.com>"
+
+function! AirlineInit()
+    let g:airline_section_a = airline#section#create(['mode'])
+    let g:airline_section_b = airline#section#create_left(['hunks','branch'])
+    let g:airline_section_c = airline#section#create(['%f'])
+    let g:airline_section_x = airline#section#create(['tagbar'])
+    let g:airline_section_y = airline#section#create(['filetype'])
+    let g:airline_section_z = airline#section#create(['ffenc'])
+    let g:airline_section_warning = airline#section#create_right(['%P','%l:%c'])
+endfunction
+let g:airline_powerline_fonts = 1
+autocmd VimEnter * call AirlineInit()
