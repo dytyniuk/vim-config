@@ -43,6 +43,7 @@ Bundle "sql.vim"
 Bundle "molokai"
 Bundle "trapd00r/neverland-vim-theme"
 Bundle "chriskempson/base16-vim"
+Bundle "xterm16.vim"
 
 filetype indent on
 
@@ -126,7 +127,7 @@ set expandtab
 
 " Highlight current line
 set cursorline
-colo neverland
+colo xterm16
 setlocal omnifunc=syntaxcomplete#Complete
 
 " phpDoc keystrokes
@@ -147,3 +148,5 @@ function! AirlineInit()
 endfunction
 let g:airline_powerline_fonts = 1
 autocmd VimEnter * call AirlineInit()
+
+let NERDTreeDirArrows = 0
